@@ -3,6 +3,7 @@ services:
     build:
       context: .
     command: bash start-dev.sh
+    restart: always
     environment:
       DB_URL: jdbc:postgresql://db:5432/barber-shop-api
       DB_USER: barber-shop-api

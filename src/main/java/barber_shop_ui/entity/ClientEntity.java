@@ -11,7 +11,6 @@ import java.util.Objects;
 import java.util.Set;
 
 
-@Entity
 @Table(
         name = "CLIENTS",
         uniqueConstraints = {
@@ -21,11 +20,12 @@ import java.util.Set;
 )
 @Getter
 @Setter
+@Entity
 public class ClientEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
 
     @Column(nullable = false, length = 150)
     private String name;
@@ -36,7 +36,7 @@ public class ClientEntity {
     @Column(nullable = false, length = 11, columnDefinition = "bpchar(11)")
     private String phone;
 
-    @OneToOne(mappedBy = "client", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
     private Set<ScheduleEntity> schedules = new HashSet<>();
 
     @Override

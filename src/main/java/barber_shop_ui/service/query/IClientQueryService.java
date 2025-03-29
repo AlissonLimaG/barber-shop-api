@@ -16,6 +16,6 @@ public interface IClientQueryService {
 
     void verifyEmail(final String email);
 
-    void verifyEmail(final long id, final String phone);
+    void verifyEmail(final long id, final String email);
 
 }

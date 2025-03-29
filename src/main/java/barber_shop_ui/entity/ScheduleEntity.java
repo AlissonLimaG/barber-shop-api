@@ -9,15 +9,15 @@ import java.time.OffsetDateTime;
 import java.util.Objects;
 
 
-@Entity
 @Table(
-        name = "CLIENTS",
+        name = "SCHEDULES",
         uniqueConstraints = {
                 @UniqueConstraint(name = "UK_SCHEDULE_INTERVAL", columnNames = {"start_at","end_at"})
         }
 )
 @Getter
 @Setter
+@Entity
 public class ScheduleEntity {
 
     @Id

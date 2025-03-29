@@ -5,7 +5,8 @@ spring:
       hibernate:
         format_sql: true
   devtools:
-    remote:
-      secret: 123
     restart:
+      enabled: true
       trigger-file: trigger.txt
+    livereload:
+      enabled: true
