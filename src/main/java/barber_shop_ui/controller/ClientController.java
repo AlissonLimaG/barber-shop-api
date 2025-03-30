@@ -17,7 +17,7 @@ import br.com.dio.barbershopui.controller.request.SaveClientRequest;
 import java.util.List;
 
 @RestController
-@RequestMapping("client")
+@RequestMapping("clients")
 @RequiredArgsConstructor
 public class ClientController {
 
